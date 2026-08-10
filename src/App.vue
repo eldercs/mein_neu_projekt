@@ -11,7 +11,7 @@
 
   <button class="bg-red-500 text-white py-4 px-6 border rounded-sm" @click="addUser()">Click</button>
   <div v-if="users.length <= 0">Es gibt keine Users</div>
-  <UserProfil v-for="(el, index) in users" :key="index" :user="el" @click="deleteUser(index)"></UserProfil>
+  <UserProfil v-for="(el, index) in users" :key="index" :index="index" :user="el" :deleteUser="deleteUser"></UserProfil>
 </template>
 <script>
 

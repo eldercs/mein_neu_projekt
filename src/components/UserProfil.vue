@@ -4,7 +4,7 @@
       <p>{{ user.name }}</p>
       <h2>{{ user.email }} {{ user.password }}</h2>
     </div>
-    <button class="absolute  right-2 bg-red-500 w-40 rounded text-white ml-auto py-3 px-6 border rounded-sm">Delete</button>
+    <button @click="deleteUser(index)" class="static  right-2 bg-red-500 w-40 rounded text-white ml-auto py-3 px-6 border rounded-sm">Delete</button>
   </div>
 </template>
 
@@ -14,6 +14,14 @@ export default {
     user:{
       type:Object,
       required: true
+    },
+    index:{
+      type:Number,
+      required:true
+    }, 
+    deleteUser:{
+      type:Function,
+      required:true
     }
   }
 }
